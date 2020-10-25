@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+body{
+    width: 100vw;  
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10%;
+    background-color: #fff;
+    padding-left: 10%;
+    position: relative;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    text-transform: capitalize;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+nav a{
+    margin: 0 20px;
+    color: hsl(233, 8%, 62%);
+    text-decoration: none;
+    position: relative;
+}
+nav a::after{ 
+    width: 0;
+    content: '';
+    height: 4px; 
+    left: 0;
+    transition: all 0.4s ease-in-out;
+    bottom: -25px;
+    position: absolute;
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+}
+nav a:hover::after{
+    width: 100%;
+}
+.requestBtn{
+    cursor: pointer;
+    font-size: 15px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color: hsl(0, 0%, 98%);
+    padding: 0 20px;
+    outline: none;
+    background-color: #fff;
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+}
+.requestBtn:hover{
+    background-image: linear-gradient(to right, hsla(136, 65%, 51%, 0.6),rgba(43, 183, 218, 0.6));
+}
+.pageFace{
+    padding-left: 10%;
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+}
+.bankIdentity{
+    height: 45%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+.bankIdentity__title{
+    font-size: 50px;
+    color: hsl(233, 26%, 24%);
+}
+.bankIdentity__description ,.services__description,.services__wrap__cart__description,.articles__wrap__carts__description,.articles__wrap__carts__director{
+    color: rgb(173, 173, 173);
+}
+.pageFace img{
+    position: absolute;
+    display: none;
+}
+.bgImg{
+    right: -500px;
+    top: -38%;
+}
+.phoneImg{
+    right: -142.3px;
+    top: -17%;
+}
+.services{
+    background-color: hsl(220, 16%, 96%);
+    padding: 7% 10%;
+}
+.services__title{
+    font-size: 40px;
+    color: hsl(233, 26%, 24%);
+}
+.services__description{
+    margin: 40px 0;
+    width: 50%;
+}
+.services__wrap{
+    margin-top: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5%;
+}
+.services__wrap__cart__title{
+    margin: 30px 0;
+    color: hsl(233, 26%, 24%);
+}
+.articles{
+    padding: 7% 10%;
+    justify-content: space-between;
+}
+.articles__wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5%;
+    margin-top: 50px;
+}
+.articles__wrap__carts{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px #ddddddb7;
+    color: hsl(233, 26%, 24%);
+}
+.articles__wrap__carts img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.articles__wrap__carts__director{
+    font-size: 12px;
+    margin: 10px 20px;
+}
+.articles__wrap__carts__title{
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+.articles__wrap__carts__title:hover{
+    color: hsl(192, 70%, 51%);
+}
+.articles__wrap__carts__description{
+    font-size: 14px;
+    margin: 10px 20px 30px;
+}
+/*---------footer-------------*/
+footer{
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    background-color: hsl(233, 26%, 24%);
+    gap: 60px;
+}
+.footer__logos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer__nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 10px 0;
+}
+.footer__nav a{
+    text-decoration: none;
+    color: hsl(0, 0%, 98%);
+    font-weight: 100;
+    font-size: 14px;
+}
+.footer__nav a:hover{
+    color: hsl(136, 65%, 51%);
+}
+.footer__request{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: flex-end;
+    color: hsl(233, 8%, 62%);
+}
+.reqfoot{
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+.mdlogo{
+    display: flex;
+}
+.mdlogo div{
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.mdlogo div:hover{
+    color: hsl(136, 65%, 51%);
+}
+
+/*----------------------media query------------------------------------------*/
+@media screen and (max-width:1200px){
+    .bgImg{
+        right: -700px;
+    }
+    .phoneImg{
+        right: -342.3px;
+    }
+}
